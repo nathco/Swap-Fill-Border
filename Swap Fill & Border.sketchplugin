@@ -1,6 +1,7 @@
-// Sketch Plugin: Swap Fill & Border (command /)
-// Source: github.com/NathanRutzky/Swap-Fill-Border
-// Version: 1.0
+// Plugin: Swap Fill & Border (command /)
+// Source: github.com/nathco/Swap-Fill-Border
+// Author: Nathan Rutzky
+// Update: 1.0
 
 (function() {
 
@@ -23,7 +24,7 @@
             [[layer border] setFillType:fillType]
             [[layer border] setGradient:fillGradient]
             [[layer border] setColor:fillColor]
-        }				
+        }
         
         if (!fills && borders) {
         
