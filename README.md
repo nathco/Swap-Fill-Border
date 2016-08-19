@@ -11,7 +11,7 @@ Sketch.app plugin for swapping the fill and border color for all selected layers
 Select `Plugins ▸ Swap Fill & Border` in the Sketch menu bar or use the keyboard shortcut to swap the fill and border color for all selected layers. To use with text layers, you must first convert the selection to outlines.
 
 **Keyboard Shortcut**  
-`Command` + `/`
- 
+`Command` + `Shift` + `x`
+
 ## Feedback
 If you discover any issues or have questions regarding usage, please send a message to [code@nath.co](mailto:code@nath.co) or find me on GitHub [@nathco](https://github.com/nathco).
