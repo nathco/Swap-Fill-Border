@@ -4,7 +4,7 @@ Sketch.app plugin for swapping the fill and border color for all selected layers
 ## Installation
 1. Download and open `Swap-Fill-Border-master.zip`
 2. Navigate the Sketch menu bar to `Plugins ▸ Reveal Plugins Folder...`
-3. Place `Swap Fill & Border.sketchplugin` into the revealed plugins directory
+3. Place `Swap-Fill-Border.sketchplugin` into the revealed plugins directory
 4. That's it...
 
 ## How to Use
