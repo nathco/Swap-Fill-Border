@@ -1,0 +1,25 @@
+{
+  "name": "Swap Fill & Border",
+  "description": "Swap the fill and border color for all selected layers. Works with gradients and solid filled objects.",
+  "author": "Nathan Rutzky",
+  "homepage": "github.com/nathco/Swap-Fill-Border",
+  "version": 1.1,
+  "identifier": "com.rutzky.swap-fill-border",
+  "updateURL": "",
+  "compatibleVersion": 39,
+  "commands": [
+    {
+      "name": "Swap Fill & Border",
+      "identifier": "swap-fill-border",
+      "shortcut": "command shift x",
+      "script": "Swap-Fill-Border.js",
+      "handler": "swapFillBorder"
+    },
+  ],
+  "menu": {
+    "isRoot" : true,
+    "items": [
+      "swap-fill-border"
+    ]
+  }
+}
