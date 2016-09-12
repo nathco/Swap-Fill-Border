@@ -1,0 +1,15 @@
+{
+    "name" : "Swap Fill & Border",
+    "identifier" : "com.sketchapp.plugin.Swap-Fill-Border",
+    "version" : "2.0",
+    "description" : "Swap fill and border color for all selected layers.",
+    "authorEmail" : "code@nath.co",
+    "author" : "Nathan Rutzky",
+    "commands" : [{
+        "script" : "Swap-Fill-Border.js",
+        "handler" : "onRun",
+        "shortcut" : "shift command x",
+        "name" : "Swap Fill & Border",
+        "identifier" : "Swap-Fill-Border"
+    }]
+}

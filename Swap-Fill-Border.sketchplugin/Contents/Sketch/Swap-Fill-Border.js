@@ -1,9 +1,12 @@
-// Sketch Plugin: Swap Fill & Border (shift command x)
+// Plugin: Swap Fill & Border
 // Source: github.com/nathco/Swap-Fill-Border
-// Version: 1.0.1
+// Author: Nathan Rutzky
+// Update: 2.0
 
-(function() {
-
+function onRun(context) {
+    
+    var selection = context.selection
+    
     for (var i=0; i<selection.count(); i++) {
     
         var layer = [[selection objectAtIndex:i] style]
@@ -78,5 +81,4 @@
             }
         }
     }
-
-})();
+};
