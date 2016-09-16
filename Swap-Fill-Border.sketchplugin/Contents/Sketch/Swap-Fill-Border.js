@@ -1,7 +1,7 @@
 // Plugin: Swap Fill & Border
 // Source: github.com/nathco/Swap-Fill-Border
 // Author: Nathan Rutzky
-// Update: 2.0
+// Update: 2.1
 
 function onRun(context) {
     
@@ -81,4 +81,6 @@ function onRun(context) {
             }
         }
     }
+    
+    context.document.reloadInspector()
 };

@@ -12,10 +12,13 @@ Select `Plugins ▸ Swap Fill & Border` in the Sketch menu bar or use the keyboa
 **Keyboard Shortcut**  
 `Shift` + `Command` + `x`  
 
-## Release Notes  
-**Swap Fill & Border 2.0**         
-– Rewrote the plugin using the new bundle format      
-– Compatible with Sketch versions 39+     
+## Release Notes    
+**Swap Fill & Border 2.1**      
+- Minor fix for refreshing the inspector panel    
+
+**Swap Fill & Border 2.0**    
+- Rewrote the plugin using the new bundle format    
+- Compatible with Sketch versions 39+         
  
 ## Feedback
 If you discover any issues or have questions regarding usage, please send a message to [code@nath.co](mailto:code@nath.co) or find me on GitHub [@nathco](https://github.com/nathco).

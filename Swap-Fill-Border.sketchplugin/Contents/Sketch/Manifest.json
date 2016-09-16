@@ -1,7 +1,7 @@
 {
     "name" : "Swap Fill & Border",
     "identifier" : "com.sketchapp.plugin.Swap-Fill-Border",
-    "version" : "2.0",
+    "version" : "2.1",
     "description" : "Swap fill and border color for all selected layers.",
     "authorEmail" : "code@nath.co",
     "author" : "Nathan Rutzky",
