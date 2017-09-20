@@ -1,11 +1,11 @@
 // Plugin: Swap Fill & Border
 // Source: github.com/nathco/Swap-Fill-Border
 // Author: Nathan Rutzky
-// Update: 2.1
+// Update: 2.2
+
 
 function onRun(context) {
-    
-    var selection = context.selection
+        var selection = context.selection
     
     for (var i=0; i<selection.count(); i++) {
     
@@ -14,70 +14,82 @@ function onRun(context) {
         var borders = [[layer borders] count]
     
         if (fills && !borders) {
-        
-            var fillType = [[layer fill] fillType]
-            var fillColor = [[layer fill] color]
-            var fillGradient = [[layer fill] gradient]
+
             
-            [[layer fill] setIsEnabled:0]
+            var layerFill = layer.fills()[0]
+        
+            var fillType = [layerFill fillType]
+            var fillColor = [layerFill color]
+            var fillGradient = [layerFill gradient]
+            
+            [layerFill setIsEnabled:0]
             [layer addStylePartOfType:1]
-            [[layer border] setThickness:2]
-            [[layer border] setPosition:1]
-            [[layer border] setFillType:fillType]
-            [[layer border] setGradient:fillGradient]
-            [[layer border] setColor:fillColor]
+            var layerBorder = layer.borders()[0]
+
+            [layerBorder setThickness:2]
+            [layerBorder setPosition:1]
+            [layerBorder setFillType:fillType]
+            [layerBorder setGradient:fillGradient]
+            [layerBorder setColor:fillColor]
         }
     
         if (!fills && borders) {
         
-            var borderType = [[layer border] fillType]
-            var borderColor = [[layer border] color]
-            var borderGradient = [[layer border] gradient]
+            var layerBorder = layer.borders()[0]
+
+            var borderType = [layerBorder fillType]
+            var borderColor = [layerBorder color]
+            var borderGradient = [layerBorder gradient]
             
-            [[layer border] setIsEnabled:0]
+            [layerBorder setIsEnabled:0]
             [layer addStylePartOfType:0]
-            [[layer fill] setFillType:borderType]
-            [[layer fill] setColor:borderColor]
-            [[layer fill] setGradient:borderGradient]
+            var layerFill = layer.fills()[0]
+
+            [layerFill setFillType:borderType]
+            [layerFill setColor:borderColor]
+            [layerFill setGradient:borderGradient]
         }
     
-        if (fills && borders) {
+        if (fills && borders) {      
+
+            var layerBorder = layer.borders()[0]
+            var layerFill = layer.fills()[0]
         
-            var borderEnabled = [[layer border] isEnabled]
-            var borderSize = [[layer border] thickness]
-            var borderType = [[layer border] fillType]
-            var borderColor = [[layer border] color]
-            var borderGradient = [[layer border] gradient]
-            var fillEnabled = [[layer fill] isEnabled]
-            var fillType = [[layer fill] fillType]
-            var fillColor = [[layer fill] color]
-            var fillGradient = [[layer fill] gradient]
+            var borderEnabled = [layerBorder isEnabled]
+            var borderSize = [layerBorder thickness]
+            var borderType = [layerBorder fillType]
+            var borderColor = [layerBorder color]
+            var borderGradient = [layerBorder gradient]
+            var fillEnabled = [layerFill isEnabled]
+            var fillType = [layerFill fillType]
+            var fillColor = [layerFill color]
+            var fillGradient = [layerFill gradient]
         
             if (fillEnabled && borderEnabled) {
             
-                [[layer border] setThickness:borderSize]
-                [[layer border] setFillType:fillType]
-                [[layer border] setColor:fillColor]
-                [[layer border] setGradient:fillGradient]
-                [[layer fill] setFillType:borderType]
-                [[layer fill] setColor:borderColor]
-                [[layer fill] setGradient:borderGradient]
+                [layerBorder setThickness:borderSize]
+                [layerBorder setFillType:fillType]
+                [layerBorder setColor:fillColor]
+                [layerBorder setGradient:fillGradient]
+                [layerFill setFillType:borderType]
+                [layerFill setColor:borderColor]
+                [layerFill setGradient:borderGradient]
             }
             
             if (!fillEnabled && borderEnabled) {
             
-                [[layer border] setIsEnabled:0]
-                [[layer fill] setIsEnabled:1]
-                [[layer fill] setColor:borderColor]
-                [[layer fill] setGradient:borderGradient]
+                [layerBorder setIsEnabled:0]
+                [layerFill setIsEnabled:1]
+                [layerFill setColor:borderColor]
+                [layerFill setGradient:borderGradient]
             }
         
             if (fillEnabled && !borderEnabled) {
             
-                [[layer fill] setIsEnabled:0]
-                [[layer border] setIsEnabled:1]
-                [[layer border] setColor:fillColor]
-                [[layer border] setGradient:fillGradient]
+                [layerFill setIsEnabled:0]
+                [layerBorder setIsEnabled:1]
+                [layerBorder setColor:fillColor]
+                [layerBorder setGradient:fillGradient]
             }
         }
     }
