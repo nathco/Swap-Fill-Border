@@ -5,7 +5,8 @@
 
 
 function onRun(context) {
-        var selection = context.selection
+    var selection = context.selection
+
     
     for (var i=0; i<selection.count(); i++) {
     
@@ -53,8 +54,7 @@ function onRun(context) {
         if (fills && borders) {      
 
             var layerBorder = layer.borders()[0]
-            var layerFill = layer.fills()[0]
-        
+            var layerFill = layer.fills()[0]     
             var borderEnabled = [layerBorder isEnabled]
             var borderSize = [layerBorder thickness]
             var borderType = [layerBorder fillType]
