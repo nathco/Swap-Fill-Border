@@ -13,6 +13,9 @@ Select `Plugins ▸ Swap Fill & Border` in the Sketch menu bar or use the keyboa
 `Shift` + `Command` + `x`  
 
 ## Release Notes    
+**Swap Fill & Border 2.2**      
+- Updated to support Sketch 45+. Currently only first border + fill will be swapped.
+
 **Swap Fill & Border 2.1**      
 - Minor fix for refreshing the inspector panel    
 
